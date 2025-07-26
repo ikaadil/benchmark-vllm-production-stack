@@ -1,6 +1,6 @@
 # Benchmark vLLM Production Stack
 
-Simple step-by-step instructions to run the benchmark for vLLM production stack.
+Step-by-step instructions to run the benchmark for vLLM production stack.
 
 ## Quick Start
 
@@ -8,7 +8,7 @@ Follow these steps in order to set up and run the benchmark:
 
 ### 1. Get the vLLM Production Stack
 
-First, clone the main vLLM production stack repository:
+First, clone the `vllm-project/production-stack` repository:
 
 ```bash
 git clone git@github.com:vllm-project/production-stack.git
@@ -17,7 +17,7 @@ cd production-stack
 
 ### 2. Update the Fake OpenAI Server
 
-Replace the existing fake OpenAI server file with the simpler version from this repository:
+Replace the existing fake OpenAI server file in `src/tests/perftest/fake-openai-server.py` with the simpler version from this repository:
 
 ### 3. Make Scripts Executable
 
@@ -48,7 +48,7 @@ bash src/vllm_router/perf-test.sh 8000
 
 ### 6. Run the Benchmark
 
-Finally, execute the benchmark script to test performance:
+Finally, execute the benchmark script from this repository to test performance:
 
 ```bash
 python3 benchmark.py

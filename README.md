@@ -58,7 +58,7 @@ python3 benchmark.py
 
 The benchmark will send 10,000 concurrent requests to vLLM router and measure how long it takes to complete all of them. You'll see output like:
 
-before improvement:
+Before improvement:
 ```
 Required time: 28.93 seconds
 ```

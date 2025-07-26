@@ -236,22 +236,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--port", type=int, default=9000, help="Port to run the server on")
     parser.add_argument("--host", type=str, default="0.0.0.0", help="Host to bind the server to")
     parser.add_argument("--max-tokens", type=int, default=100, help="Maximum tokens to generate")
-    parser.add_argument("--model-name", type=str, default="fake_model_name", help="Model name to use")
+    parser.add_argument("--speed", type=int, default=100, help="Number of tokens per second per request")
     return parser.parse_args()
 
 
 def main():
     """Main entry point."""
     args = parse_args()
-    
+    # Use static model_name, only use CLI for port, host, max_tokens, speed
     server = FakeOpenAIServer(
-        model_name=args.model_name,
+        model_name="fake_model_name",
         max_tokens=args.max_tokens
     )
-    
+    # You can access args.speed in your endpoints if needed
     uvicorn.run(
-        server.app, 
-        host=args.host, 
+        server.app,
+        host=args.host,
         port=args.port
     )
 

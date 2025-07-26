@@ -29,6 +29,11 @@ chmod +x src/tests/perftest/*.sh
 ```
 
 ### 4. Start the Fake OpenAI Server
+Move to `src/tests/perftest`  to run the mock OpenAI server.
+
+```bash
+cd src/tests/perftest
+```
 
 Run the mock OpenAI server with these settings:
 - `4` = number of server instances
